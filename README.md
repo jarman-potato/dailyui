@@ -7,6 +7,7 @@ Daily UI デザインチャレンジの実装集 by jarman-potato
 | Day | Challenge | Status | Link |
 |-----|-----------|--------|------|
 | 001 | Sign Up | ✅ | [day001-signup](./day001-signup/) |
+| 002 | Credit Card Checkout | ✅ | [day-002-credit-card](./day-002-credit-card/) |
 
 ## 技術スタック
 
@@ -34,6 +35,14 @@ npx serve
 - フォームバリデーション（リアルタイム）
 - スムーズなアニメーション（keyframes）
 - アクセシビリティ考慮（aria-label）
+
+### Day 002 - Credit Card Checkout
+- リアルタイムカードプレビュー
+- カードタイプ自動検出（Visa, Mastercard, Amex等）
+- Luhnアルゴリズムによる番号検証
+- 自動フォーマット（4桁区切り、MM/YY）
+- カードタイプ別グラデーション
+- レスポンシブデザイン
 
 ---
 
