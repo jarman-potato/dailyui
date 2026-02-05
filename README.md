@@ -8,6 +8,7 @@ Daily UI デザインチャレンジの実装集 by jarman-potato
 |-----|-----------|--------|------|
 | 001 | Sign Up | ✅ | [day001-signup](./day001-signup/) |
 | 002 | Credit Card Checkout | ✅ | [day-002-credit-card](./day-002-credit-card/) |
+| 003 | Landing Page | ✅ | [day-003-landing-page](./day-003-landing-page/) |
 
 ## 技術スタック
 
@@ -43,6 +44,16 @@ npx serve
 - 自動フォーマット（4桁区切り、MM/YY）
 - カードタイプ別グラデーション
 - レスポンシブデザイン
+
+### Day 003 - Landing Page
+- AI Assistant "Potato AI" をテーマにしたランディングページ
+- CSS Custom Properties でダークテーマ実装
+- グラデーションテキスト効果
+- Intersection Observer でスクロールアニメーション
+- チャットウィンドウのタイピングアニメーション
+- フローティングカードのパララックス効果
+- 統計カウンターアニメーション
+- 完全レスポンシブデザイン（モバイル対応）
 
 ---
 
