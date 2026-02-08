@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | Potato AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="potato-wrapper">
+      <div class="potato" id="potato">
+        <div class="face">
+          <div class="eyes">
+            <div class="eye left">
+              <div class="pupil"></div>
+            </div>
+            <div class="eye right">
+              <div class="pupil"></div>
+            </div>
+          </div>
+          <div class="mouth sad"></div>
+        </div>
+        <div class="sprout"></div>
+      </div>
+      <div class="shadow"></div>
+    </div>
+    
+    <div class="content">
+      <h1 class="error-code">4<span class="zero">0</span>4</h1>
+      <h2 class="message">ページが見つかりません</h2>
+      <p class="description">
+        お探しのページは掘り起こせませんでした...🥔<br>
+        もしかして、別の畑に植えられているかも？
+      </p>
+      
+      <div class="actions">
+        <a href="#" class="btn primary" onclick="goHome()">
+          <span class="icon">🏠</span>
+          ホームに戻る
+        </a>
+        <a href="#" class="btn secondary" onclick="goBack()">
+          <span class="icon">←</span>
+          前のページへ
+        </a>
+      </div>
+      
+      <div class="search-box">
+        <input type="text" placeholder="探しているものを入力..." id="searchInput">
+        <button class="search-btn" onclick="search()">🔍</button>
+      </div>
+    </div>
+    
+    <div class="particles" id="particles"></div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
