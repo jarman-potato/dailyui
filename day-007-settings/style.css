@@ -1,0 +1,269 @@
+:root {
+  --bg: #0f0f1a;
+  --card: #1a1a2e;
+  --card-hover: #252540;
+  --text: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent: #f59e0b;
+  --accent-light: #fbbf24;
+  --danger: #ef4444;
+  --success: #10b981;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.settings-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--card);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border);
+}
+
+.header h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.back-btn {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  color: var(--accent);
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+
+.back-btn:hover {
+  background: var(--card-hover);
+}
+
+.header-spacer {
+  width: 40px;
+}
+
+/* Content */
+.settings-content {
+  padding: 20px;
+}
+
+/* Section */
+.settings-section {
+  margin-bottom: 32px;
+}
+
+.section-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  padding-left: 4px;
+}
+
+/* Card */
+.settings-card {
+  background: var(--card);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Setting Item */
+.setting-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.setting-item:hover {
+  background: var(--card-hover);
+}
+
+.setting-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.setting-icon {
+  font-size: 1.3rem;
+  width: 32px;
+  text-align: center;
+}
+
+.setting-label {
+  font-size: 1rem;
+}
+
+.setting-value {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+}
+
+.setting-value-text {
+  color: var(--text-secondary);
+}
+
+.chevron {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+}
+
+.chevron.danger {
+  color: var(--danger);
+}
+
+/* Profile Setting */
+.profile-setting {
+  padding: 20px;
+}
+
+.profile-preview {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.profile-avatar {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.profile-email {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+/* Toggle Switch */
+.toggle {
+  position: relative;
+  width: 52px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  inset: 0;
+  background: var(--card-hover);
+  border-radius: 32px;
+  transition: all 0.3s ease;
+}
+
+.toggle-slider::before {
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  left: 3px;
+  top: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.toggle input:checked + .toggle-slider {
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+}
+
+.toggle input:checked + .toggle-slider::before {
+  transform: translateX(20px);
+}
+
+/* Logout Button */
+.logout-btn {
+  width: 100%;
+  padding: 16px;
+  background: transparent;
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 24px;
+}
+
+.logout-btn:hover {
+  background: var(--danger);
+  color: white;
+}
+
+/* Footer */
+.footer-text {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  padding-bottom: 40px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .settings-content {
+    padding: 16px;
+  }
+  
+  .setting-item {
+    padding: 14px 16px;
+  }
+}
