@@ -9,6 +9,10 @@ Daily UI デザインチャレンジの実装集 by jarman-potato
 | 001 | Sign Up | ✅ | [day001-signup](./day001-signup/) |
 | 002 | Credit Card Checkout | ✅ | [day-002-credit-card](./day-002-credit-card/) |
 | 003 | Landing Page | ✅ | [day-003-landing-page](./day-003-landing-page/) |
+| 004 | Calculator | ✅ | [day-004-calculator](./day-004-calculator/) |
+| 005 | App Icon | ✅ | [day-005-app-icon](./day-005-app-icon/) |
+| 006 | User Profile | ✅ | [day-006-user-profile](./day-006-user-profile/) |
+| 007 | Settings | ✅ | [day-007-settings](./day-007-settings/) |
 | 008 | 404 Page | ✅ | [day-008-404-page](./day-008-404-page/) |
 
 ## 技術スタック
@@ -55,6 +59,45 @@ npx serve
 - フローティングカードのパララックス効果
 - 統計カウンターアニメーション
 - 完全レスポンシブデザイン（モバイル対応）
+
+### Day 004 - Calculator
+- iOS風電卓UIデザイン
+- キーボード入力対応（0-9, +, -, *, /, Enter, Escape）
+- 四則演算 + パーセント計算
+- トグルサイン（±）機能
+- リップルエフェクト付きボタン
+- 演算子ハイライト状態
+- 浮動小数点エラー対策
+- レスポンシブデザイン
+
+### Day 005 - App Icon
+- Potato AI アプリアイコンショーケース
+- 複数サイズ展開（1024, 512, 256, 64px）
+- スタイルバリエーション（Purple, Green, Dark, Flat）
+- アニメーションリング効果
+- スパークルエフェクト
+- ホバーアニメーション
+- CSSのみでアイコン描画
+
+### Day 006 - User Profile
+- SNS風ユーザープロフィール画面
+- カバー画像 + アバター配置
+- フォロー/メッセージボタン
+- タブ切り替え（Posts, Projects, Likes）
+- 統計表示（投稿数、フォロワー等）
+- 投稿カード・プロジェクトカード
+- オンラインステータス表示
+- インタラクティブなフォローボタン
+
+### Day 007 - Settings
+- モバイルアプリ風設定画面
+- セクション分けされたカードUI
+- トグルスイッチ（カスタムデザイン）
+- ダークモード/通知/サウンド設定
+- AI設定セクション（モデル選択等）
+- プライバシー＆セキュリティ設定
+- 危険操作の確認ダイアログ
+- ログアウトボタン
 
 ### Day 008 - 404 Page
 - 🥔 ポテトキャラクターをテーマにした404ページ

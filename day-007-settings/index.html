@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings | Potato AI 🥔</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="settings-container">
+    <header class="header">
+      <button class="back-btn">←</button>
+      <h1>Settings</h1>
+      <div class="header-spacer"></div>
+    </header>
+    
+    <main class="settings-content">
+      <!-- Profile Section -->
+      <section class="settings-section">
+        <h2 class="section-title">Profile</h2>
+        <div class="settings-card">
+          <div class="setting-item profile-setting">
+            <div class="profile-preview">
+              <div class="profile-avatar">🥔</div>
+              <div class="profile-info">
+                <span class="profile-name">jarman-potato</span>
+                <span class="profile-email">jarman@potato.ai</span>
+              </div>
+            </div>
+            <span class="chevron">›</span>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Preferences Section -->
+      <section class="settings-section">
+        <h2 class="section-title">Preferences</h2>
+        <div class="settings-card">
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-icon">🌙</span>
+              <span class="setting-label">Dark Mode</span>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" id="darkMode" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-icon">🔔</span>
+              <span class="setting-label">Notifications</span>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" id="notifications" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-icon">🔊</span>
+              <span class="setting-label">Sound Effects</span>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" id="sounds">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-icon">🌐</span>
+              <span class="setting-label">Language</span>
+            </div>
+            <div class="setting-value">
+              <span>日本語</span>
+              <span class="chevron">›</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- AI Settings Section -->
+      <section class="settings-section">
+        <h2 class="section-title">AI Settings</h2>
+        <div class="settings-card">
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-icon">🧠</span>
+              <span class="setting-label">Model</span>
+            </div>
+            <div class="setting-value">
+              <span>Claude Opus 4.6</span>
+              <span class="chevron">›</span>
+            </div>
+          </div>
+          
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-icon">💬</span>
+              <span class="setting-label">Response Style</span>
+            </div>
+            <div class="setting-value">
+              <span>Balanced</span>
+              <span class="chevron">›</span>
+            </div>
+          </div>
+          
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-icon">📝</span>
+              <span class="setting-label">Memory</span>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" id="memory" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Privacy Section -->
+      <section class="settings-section">
+        <h2 class="section-title">Privacy & Security</h2>
+        <div class="settings-card">
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-icon">🔒</span>
+              <span class="setting-label">Two-Factor Auth</span>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" id="twoFactor">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-icon">📊</span>
+              <span class="setting-label">Usage Analytics</span>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" id="analytics" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-icon">🗑️</span>
+              <span class="setting-label">Clear Data</span>
+            </div>
+            <span class="chevron danger">›</span>
+          </div>
+        </div>
+      </section>
+      
+      <!-- About Section -->
+      <section class="settings-section">
+        <h2 class="section-title">About</h2>
+        <div class="settings-card">
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-icon">ℹ️</span>
+              <span class="setting-label">Version</span>
+            </div>
+            <span class="setting-value-text">1.0.0</span>
+          </div>
+          
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-icon">📄</span>
+              <span class="setting-label">Terms of Service</span>
+            </div>
+            <span class="chevron">›</span>
+          </div>
+          
+          <div class="setting-item">
+            <div class="setting-info">
+              <span class="setting-icon">🛡️</span>
+              <span class="setting-label">Privacy Policy</span>
+            </div>
+            <span class="chevron">›</span>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Logout -->
+      <button class="logout-btn">Log Out</button>
+      
+      <p class="footer-text">Made with 🥔 by jarman-potato</p>
+    </main>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
