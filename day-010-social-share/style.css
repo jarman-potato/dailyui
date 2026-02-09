@@ -1,0 +1,620 @@
+/* ========================================
+   Day 010 - Social Share
+   DailyUI Challenge
+   Made with 🥔 by jarman-potato
+   ======================================== */
+
+:root {
+    --primary: #8B5CF6;
+    --primary-light: #A78BFA;
+    --primary-dark: #7C3AED;
+    --secondary: #F59E0B;
+    --background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --card-bg: #ffffff;
+    --text-primary: #1F2937;
+    --text-secondary: #6B7280;
+    --text-muted: #9CA3AF;
+    --border: #E5E7EB;
+    --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    
+    /* Social Colors */
+    --twitter: #000000;
+    --facebook: #1877F2;
+    --linkedin: #0A66C2;
+    --reddit: #FF4500;
+    --email: #EA4335;
+    --copy: #10B981;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--background);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* ========================================
+   Article Card
+   ======================================== */
+
+.container {
+    width: 100%;
+    max-width: 480px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card-image {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Potato Character */
+.potato-hero {
+    position: relative;
+}
+
+.potato-character {
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+.potato-body {
+    width: 120px;
+    height: 100px;
+    background: linear-gradient(145deg, #DEB887 0%, #D2691E 100%);
+    border-radius: 50% 50% 45% 45%;
+    position: relative;
+    box-shadow: 
+        inset -10px -10px 20px rgba(139, 69, 19, 0.3),
+        inset 5px 5px 15px rgba(255, 228, 181, 0.3);
+}
+
+.potato-face {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 60%;
+}
+
+.eye {
+    position: absolute;
+    width: 16px;
+    height: 20px;
+    background: #1a1a1a;
+    border-radius: 50%;
+    top: 20%;
+    animation: blink 4s infinite;
+}
+
+.eye::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    top: 4px;
+    left: 3px;
+}
+
+.eye.left { left: 20%; }
+.eye.right { right: 20%; }
+
+.cheek {
+    position: absolute;
+    width: 20px;
+    height: 12px;
+    background: rgba(255, 150, 150, 0.5);
+    border-radius: 50%;
+    top: 55%;
+}
+
+.cheek.left { left: 5%; }
+.cheek.right { right: 5%; }
+
+.mouth {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 15px;
+    background: #8B4513;
+    border-radius: 0 0 50% 50%;
+}
+
+.sparkles {
+    position: absolute;
+    width: 160px;
+    height: 140px;
+    top: -20px;
+    left: -20px;
+}
+
+.sparkles span {
+    position: absolute;
+    font-size: 20px;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+.sparkles span:nth-child(1) { top: 0; left: 10%; animation-delay: 0s; }
+.sparkles span:nth-child(2) { top: 20%; right: 0; animation-delay: 0.5s; }
+.sparkles span:nth-child(3) { bottom: 10%; left: 0; animation-delay: 1s; }
+
+/* Card Content */
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-light), var(--primary));
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0.75rem 0;
+    line-height: 1.3;
+}
+
+.card-description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+
+.card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.author-avatar {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+}
+
+.author-date {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Share Button */
+.share-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+}
+
+.share-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5);
+}
+
+.share-button:active {
+    transform: scale(0.98);
+}
+
+.share-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* ========================================
+   Share Modal
+   ======================================== */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: white;
+    border-radius: 24px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    transform: scale(0.9) translateY(20px);
+    transition: transform 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.modal-overlay.active .modal {
+    transform: scale(1) translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 36px;
+    height: 36px;
+    background: var(--border);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+    background: var(--text-muted);
+    color: white;
+}
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.modal-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.modal-header p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Share Options Grid */
+.share-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.share-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+    background: transparent;
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    font-family: inherit;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.share-option:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-sm);
+}
+
+.option-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.option-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Platform Colors */
+.share-option.twitter .option-icon {
+    background: #f0f0f0;
+    color: var(--twitter);
+}
+
+.share-option.twitter:hover {
+    border-color: var(--twitter);
+    color: var(--twitter);
+}
+
+.share-option.twitter:hover .option-icon {
+    background: var(--twitter);
+    color: white;
+}
+
+.share-option.facebook .option-icon {
+    background: #EBF4FF;
+    color: var(--facebook);
+}
+
+.share-option.facebook:hover {
+    border-color: var(--facebook);
+    color: var(--facebook);
+}
+
+.share-option.facebook:hover .option-icon {
+    background: var(--facebook);
+    color: white;
+}
+
+.share-option.linkedin .option-icon {
+    background: #E8F4FD;
+    color: var(--linkedin);
+}
+
+.share-option.linkedin:hover {
+    border-color: var(--linkedin);
+    color: var(--linkedin);
+}
+
+.share-option.linkedin:hover .option-icon {
+    background: var(--linkedin);
+    color: white;
+}
+
+.share-option.reddit .option-icon {
+    background: #FFECE5;
+    color: var(--reddit);
+}
+
+.share-option.reddit:hover {
+    border-color: var(--reddit);
+    color: var(--reddit);
+}
+
+.share-option.reddit:hover .option-icon {
+    background: var(--reddit);
+    color: white;
+}
+
+.share-option.email .option-icon {
+    background: #FFEEED;
+    color: var(--email);
+}
+
+.share-option.email:hover {
+    border-color: var(--email);
+    color: var(--email);
+}
+
+.share-option.email:hover .option-icon {
+    background: var(--email);
+    color: white;
+}
+
+.share-option.copy .option-icon {
+    background: #D1FAE5;
+    color: var(--copy);
+}
+
+.share-option.copy:hover {
+    border-color: var(--copy);
+    color: var(--copy);
+}
+
+.share-option.copy:hover .option-icon {
+    background: var(--copy);
+    color: white;
+}
+
+/* Copy Toast */
+.copy-toast {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: var(--copy);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.copy-toast.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* ========================================
+   Confetti Animation
+   ======================================== */
+
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    animation: confetti-fall 3s ease-out forwards;
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+
+.footer {
+    margin-top: 2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+}
+
+/* ========================================
+   Animations
+   ======================================== */
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes blink {
+    0%, 90%, 100% { transform: scaleY(1); }
+    95% { transform: scaleY(0.1); }
+}
+
+@keyframes sparkle {
+    0%, 100% { 
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% { 
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes confetti-fall {
+    0% {
+        opacity: 1;
+        transform: translateY(-100vh) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100vh) rotate(720deg);
+    }
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+
+    .card-content {
+        padding: 1.25rem;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+    .modal {
+        padding: 1.5rem;
+    }
+
+    .share-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .option-icon {
+        width: 44px;
+        height: 44px;
+    }
+}
