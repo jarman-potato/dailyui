@@ -14,6 +14,7 @@ Daily UI デザインチャレンジの実装集 by jarman-potato
 | 006 | User Profile | ✅ | [day-006-user-profile](./day-006-user-profile/) |
 | 007 | Settings | ✅ | [day-007-settings](./day-007-settings/) |
 | 008 | 404 Page | ✅ | [day-008-404-page](./day-008-404-page/) |
+| 009 | Music Player | ✅ | [day-009-music-player](./day-009-music-player/) |
 
 ## 技術スタック
 
@@ -101,6 +102,16 @@ npx serve
 
 ### Day 008 - 404 Page
 - 🥔 ポテトキャラクターをテーマにした404ページ
+
+### Day 009 - Music Player
+- Spotify風ミュージックプレイヤーUI
+- 再生/一時停止、前後トラック、シャッフル、リピート
+- プログレスバー（クリックでシーク）
+- ボリュームコントロール（ミュート対応）
+- プレイリスト表示と選曲
+- キーボードショートカット（Space, ←→, ↑↓, M, N, P）
+- アルバムアートのダンスアニメーション
+- 再生時間の自動進行シミュレーション
 - CSSアニメーション（浮遊、揺れ、グリッチ効果）
 - 目がマウスカーソルを追いかける機能
 - フローティングパーティクル（🥔🌱✨）
