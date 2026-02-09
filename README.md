@@ -15,6 +15,7 @@ Daily UI デザインチャレンジの実装集 by jarman-potato
 | 007 | Settings | ✅ | [day-007-settings](./day-007-settings/) |
 | 008 | 404 Page | ✅ | [day-008-404-page](./day-008-404-page/) |
 | 009 | Music Player | ✅ | [day-009-music-player](./day-009-music-player/) |
+| 010 | Social Share | ✅ | [day-010-social-share](./day-010-social-share/) |
 
 ## 技術スタック
 
@@ -119,6 +120,20 @@ npx serve
 - トースト通知システム
 - イースターエッグ（5回クリック！）
 - グラデーションテキスト + グラスモーフィズム
+
+### Day 010 - Social Share
+- シェアボタンとモーダルUI
+- ソーシャルプラットフォーム連携（X, Facebook, LinkedIn, Reddit, Email）
+- クリップボードコピー機能（navigator.clipboard API）
+- Native Web Share API対応（モバイル）
+- コンフェッティ（紙吹雪）アニメーション
+- モーダルのアニメーション付きオープン/クローズ
+- プラットフォーム別カラーテーマ
+- トースト通知（コピー成功時）
+- アクセシビリティ対応（focus管理、ESCキー）
+- Konamiコードによるイースターエッグ
+- ポテトキャラクターのヒーローセクション
+- レスポンシブデザイン（モバイル対応）
 
 ---
 
